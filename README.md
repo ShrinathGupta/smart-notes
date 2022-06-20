@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Smart Notes
 
 This project is to create notes
 
@@ -7,9 +7,9 @@ This project is to create notes
 - Typescript
 
 ## Folder Structure
-`src\components` - This directory contains components
-`src\container` - This directory contains container
-`src\db` - This directory contains db connections method
+- `src\components` - This directory contains components
+- `src\container` - This directory contains container
+- `src\db` - This directory contains db connections method
 
 ## Arch
 ![Alt text](./Arch.png?raw=true)
@@ -33,4 +33,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 ### `CI/CD integrated`
+Uses aws s3 bucket to deploy application
 
