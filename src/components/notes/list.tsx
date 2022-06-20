@@ -18,10 +18,10 @@ export const List = (notes:any) => {
   const {onChange} = useContainer();
   const DataList = () => {
     return useMemo(()=> {
-      return notes.notes && notes.notes.map((obj: any) => {
+      return notes.notes && notes.notes.map((obj: InotesData) => {
         return (
-          <li onClick={() => onChange(obj)} key={obj.id}>
-            <strong>{capitalizeFirstLetter(obj.value.title)}</strong>
+          <li className='li-notes'onClick={(e) => onChange(obj)} key={obj.id} >
+            <i className="fa fa-sticky-note"> </i> &nbsp;<strong>{capitalizeFirstLetter(obj.value.title)}</strong>
           </li>
         );
       });

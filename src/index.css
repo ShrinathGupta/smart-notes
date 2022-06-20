@@ -16,9 +16,8 @@ textarea {
   box-shadow: 0 0px 0 rgba(0,0,0,0.03) inset; 
   outline: 0;
   font-size: 1.5em;
-  width: 100%; height: 100%;
-}
-
+  width: 100%; height: 700px;
+} 
 .content{
   padding:0;
   max-width: 100%;
@@ -35,8 +34,8 @@ textarea {
 .SplitPane-left {
   float: left;
   width: 27%;
-  height: 612px;
-  max-height: 612px;
+  height: 800px;
+  max-height: 800px;
   overflow-y: auto;
 }
 
