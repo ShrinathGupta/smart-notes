@@ -37,7 +37,7 @@ const AppContainer = () => {
 
   const identifyTitle = (str: string): string => {
     const identifier = '#';
-    if(str.indexOf(identifier) >= 0) {
+    if(str.indexOf(identifier) >= 0 && str.charAt(str.indexOf(identifier)+1) !== '#') {
       return str.substr(str.indexOf(identifier)+1, str.indexOf('\n') > 0 ? str.indexOf('\n') : str.length);
     }
     return ''
@@ -58,7 +58,6 @@ const AppContainer = () => {
   const resetCurrentNote = () => {
      setNotes('')
      setSelectedNote(initData)
-     console.log('hahha', selectedNote, notes)
   }
 
   useEffect(() => {
@@ -79,9 +78,7 @@ const AppContainer = () => {
    * Fetch latest list of notes
    */
   useEffect(()=> {
-     setTimeout(()=>{
       fetch();
-     },10)
   },[]);
   /**
    * To set new selected note  
