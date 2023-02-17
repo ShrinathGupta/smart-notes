@@ -1,18 +1,33 @@
-import './App.css';
-import {AppContainer} from './container/index'
-import {connect} from './db/connect'
-const runIndexDb = async () => {
-  await connect();
-}
-runIndexDb()
+import { useEffect, useState } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+import "./App.css";
+import { AppContainer } from "./container/index";
+import { connect } from "./db/connect";
 
-const App = () =>  {
-    
+const queryClient = new QueryClient();
+
+const App = () => {
+  const [isConnectionReady, setIsConnectionReady] = useState(false);
+
+  useEffect(() => {
+    const runIndexDb = async () => {
+      await connect();
+      setIsConnectionReady(true);
+    };
+    runIndexDb();
+  }, []);
+
   return (
     <div className="App">
-        <AppContainer/> 
-     </div>
+      {isConnectionReady === true ? (
+        <QueryClientProvider client={queryClient}>
+          <AppContainer />
+        </QueryClientProvider>
+      ) : (
+        "Loading..."
+      )}
+    </div>
   );
-}
+};
 
 export default App;

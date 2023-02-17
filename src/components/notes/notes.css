@@ -5,38 +5,36 @@
   list-style: none; /* Remove list bullets */
   padding: 0;
   margin-left: 0px;
-  
 }
-input:focus{
+input:focus {
   outline: none;
 }
-.input{
-    width: 100%;
-    height: 34px;
-    background-color:#212121;
-    margin-top: 15px;
-    color: white;
+.input {
+  width: 100%;
+  height: 34px;
+  background-color: #212121;
+  margin-top: 15px;
+  color: white;
 }
-.create{
+.create {
   float: right;
   cursor: pointer;
   font-size: 30px;
-  padding-right: 15px
+  padding-right: 15px;
 }
 .delete {
   float: right;
-    padding-top: 9px;
-    margin-right: 15px;
-    cursor: pointer;
+  margin-right: 15px;
+  cursor: pointer;
 }
 .notes-section ul > li {
-  text-align:left;
+  text-align: left;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-left: 20px;
   border-bottom: 0.5px white solid;
   cursor: pointer;
 }
-.notes-section ul>li:hover{
-   background-color: lightgray;
+.notes-section ul > li:hover {
+  background-color: lightgray;
 }
